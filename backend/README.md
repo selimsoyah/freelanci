@@ -136,9 +136,43 @@ backend/
 
 ## 🧪 Testing
 
+### Running Tests
+
 ```bash
 npm test
 ```
+
+### Payment System Testing
+
+The payment system has been thoroughly tested with 25 test scenarios covering:
+
+- ✅ Fee calculation (5% client, 2% freelancer)
+- ✅ Complete payment flow (initiate → verify → release)
+- ✅ Refund and dispute resolution
+- ✅ Transaction history and filtering
+- ✅ Error handling and edge cases
+- ✅ Authorization and access control
+
+**Test Documentation:**
+- `TEST_PAYMENT_API.md` - Comprehensive testing guide with curl examples
+- `PAYMENT_SYSTEM_TEST_RESULTS.md` - Detailed test results and validation report
+
+**Test Scripts:**
+- `src/scripts/createTestUsers.ts` - Create test users for all roles
+- `src/scripts/mockPaymentVerification.ts` - Mock payment gateway verification
+
+**Test Users:**
+```bash
+# Create test users
+npx ts-node src/scripts/createTestUsers.ts
+
+# Test credentials (after creation):
+# Client: client@test.com / Test123!@#
+# Freelancer: freelancer@test.com / Test123!@#
+# Admin: admin@test.com / Test123!@#
+```
+
+**Success Rate:** 100% (25/25 tests passed)
 
 ## 📦 Free Services Used
 

@@ -125,15 +125,4 @@ Profile.init(
   }
 );
 
-// Define associations
-Profile.belongsTo(User, {
-  foreignKey: 'user_id',
-  as: 'user',
-});
-
-User.hasOne(Profile, {
-  foreignKey: 'user_id',
-  as: 'profile',
-});
-
 export default Profile;
